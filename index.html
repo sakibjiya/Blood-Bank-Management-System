@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blood Bank Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🩸 Blood Bank Management System</h1>
+        <p>Donate Blood • Save Lives</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#register">Register Donor</a>
+        <a href="#donors">Donor List</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <h2>Welcome to Blood Bank</h2>
+        <p>
+            Find blood donors and manage blood donor information easily.
+        </p>
+
+        <button onclick="scrollToRegister()">
+            Register as Donor
+        </button>
+    </section>
+
+    <!-- Blood Group Cards -->
+    <section class="container">
+
+        <h2>Available Blood Groups</h2>
+
+        <div class="blood-cards">
+
+            <div class="blood-card">
+                <h3>A+</h3>
+                <p id="A+">0 Donors</p>
+            </div>
+
+            <div class="blood-card">
+                <h3>A-</h3>
+                <p id="A-">0 Donors</p>
+            </div>
+
+            <div class="blood-card">
+                <h3>B+</h3>
+                <p id="B+">0 Donors</p>
+            </div>
+
+            <div class="blood-card">
+                <h3>B-</h3>
+                <p id="B-">0 Donors</p>
+            </div>
+
+            <div class="blood-card">
+                <h3>O+</h3>
+                <p id="O+">0 Donors</p>
+            </div>
+
+            <div class="blood-card">
+                <h3>O-</h3>
+                <p id="O-">0 Donors</p>
+            </div>
+
+            <div class="blood-card">
+                <h3>AB+</h3>
+                <p id="AB+">0 Donors</p>
+            </div>
+
+            <div class="blood-card">
+                <h3>AB-</h3>
+                <p id="AB-">0 Donors</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Donor Registration -->
+    <section id="register" class="container">
+
+        <h2>Donor Registration</h2>
+
+        <form id="donorForm">
+
+            <label>Full Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Age</label>
+            <input
+                type="number"
+                id="age"
+                placeholder="Enter your age"
+                required
+            >
+
+            <label>Blood Group</label>
+
+            <select id="bloodGroup" required>
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label>Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number"
+                required
+            >
+
+            <label>City</label>
+            <input
+                type="text"
+                id="city"
+                placeholder="Enter city"
+                required
+            >
+
+            <button type="submit">
+                Register Donor
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Search -->
+    <section id="donors" class="container">
+
+        <h2>Donor List</h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search by name or blood group..."
+        >
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Blood Group</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="donorTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>About Blood Bank</h2>
+
+        <p>
+            This Blood Bank Management System helps manage donor
+            information and makes it easier to find blood donors.
+        </p>
+
+        <p>
+            Every blood donation can help save lives.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Blood Bank Management System</p>
+        <p>Developed for College Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
